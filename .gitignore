@@ -1,0 +1,27 @@
+# Python
+*.pyc
+*.pyo
+**/backend/__pycache__/
+
+# VSCode
+.vscode/
+
+# Environment variables
+.env
+*.env
+
+# Flask
+**/backend/instance/
+**/backend/*.log
+
+# SQLite
+**/backend/*.sqlite3
+
+# PyInstaller
+*.spec
+
+# Redis
+**/backend/*.rdb
+
+# Virtual Environment
+**/backend/venv/

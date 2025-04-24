@@ -1,0 +1,37 @@
+1. in the terminal of vscode, go to backend folder, where ur app.py resides
+2. Create the virtual environment if not created 
+    python -m venv venv 
+3. Activate the virtual environment
+    ./venv/Scripts/Activate.ps1 
+4. install required packages 
+    pip install -r requirements.txt 
+5. go to wsl, run
+    cd /mnt/c/Users/Kasturi/Downloads/HouseholdServices/HouseholdServices/backend
+6. now inside the directory run,
+   redis-server
+    -if some processes r already running, to kill all processes-
+    sudo systemctl stop redis
+7. open new wsl, run
+    cd /mnt/c/Users/Kasturi/Downloads/HouseholdServices/HouseholdServices/backend
+8. run
+    redis-cli ping
+    (u shud see a PONG) this means its running
+9. then run
+    celery -A app.celery worker --loglevel=info
+10. go to wsl, run
+   cd /mnt/c/Users/Kasturi/Downloads/HouseholdServices/HouseholdServices/backend
+11. now inside the directory run,
+    celery -A app.celery beat --loglevel=info
+
+
+
+-----------------------------------------------------------------
+1. Run developement server 
+    python app.py
+2. Go to frontend folder
+3. Run it by
+    npm run dev
+4. The password for users is capital initial with 123 at end
+    eg ID = 2
+       Name = Kasturi Sangale
+       Password = KasturiSangale123
